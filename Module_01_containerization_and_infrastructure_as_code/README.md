@@ -77,7 +77,15 @@ if someday we want to remove all container, we can type like this:
 
 but, for remove single container name we can type like this:
 
-**docker rm container_name**
+**docker container rm container_name**
+
+if we want to start the container that we want, we can type :
+
+**docker container start container_name**
+
+but if we want to stop, we can type like this:
+
+**docker container stop container_name**
 
 if we want to see how application running in the container. so we can check the logs with this type:
 
