@@ -87,6 +87,8 @@ but if we want to stop, we can type like this:
 
 **docker container stop container_name**
 
+### Container Logs
+
 if we want to see how application running in the container. so we can check the logs with this type:
 
 **docker container logs container_name**
@@ -95,7 +97,9 @@ in realtime logs:
 
 **docker container logs -f container_name**
 
-**Container Exec**
+### Container Exec
+
+
 
 
 
