@@ -5,6 +5,8 @@ import pandas as pd
 
 import psycopg2
 
+import argparse
+
 from time import time
 
 from sqlalchemy import create_engine
