@@ -6,12 +6,13 @@ docker run -it --name docker_hw1 python:3.12.8 bash
 pip --version
 ```
 
-${\color{blue}2.}$<br> Connect to pgadmin:
-Hostname : postgres
-Port : 5432 
-Maintenance database : ny_taxi
-Username : postgres
-Password : postgres
+${\color{blue}2.}$<br> 
+#### Connect to pgadmin (localhost:8080)
+- Hostname : postgres
+- Port : 5432 
+- Maintenance database : ny_taxi
+- Username : postgres
+- Password : postgres
 
 ${\color{blue}3.}$<br>
 ``` sql
