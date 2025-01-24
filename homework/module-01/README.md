@@ -30,4 +30,50 @@ FROM (SELECT * FROM taxi_trips WHERE to_char(lpep_dropoff_datetime::timestamp, '
 GROUP BY number;
 ```
 
+${\color{blue}4.}$<br>
+``` sql
+SELECT 
+	to_char(lpep_pickup_datetime::timestamp, 'yyyy-MM-DD') 
+		AS date 
+	FROM 
+		taxi_trips 
+	WHERE 
+		trip_distance IN (SELECT MAX(trip_distance) FROM taxi_trips);
+```
 
+${\color{blue}5.}$<br>
+``` sql
+SELECT * 
+	FROM 
+	(SELECT z."Zone", ROUND(SUM(t.total_amount)::numeric, 2) AS total_amount 
+		FROM 
+			(SELECT * FROM taxi_trips WHERE to_char(lpep_pickup_datetime::timestamp, 'yyyy-MM-DD') = '2019-10-18') AS t
+		JOIN zones AS z ON (z."LocationID" = t."PULocationID")
+			GROUP BY z."Zone"
+				ORDER BY total_amount DESC) 
+	WHERE total_amount > 13000;
+```
+
+${\color{blue}6.}$<br>
+``` sql
+SELECT zDO."Zone" AS DO_Zone
+	FROM taxi_trips AS t
+JOIN zones AS zPU ON (zPU."LocationID" = t."PULocationID")
+JOIN zones AS zDO ON (zDO."LocationID" = t."DOLocationID")
+	WHERE (to_char(t.lpep_pickup_datetime::timestamp, 'yyyy-MM') = '2019-10') AND (zPU."Zone" = 'East Harlem North')
+		ORDER BY tip_amount DESC LIMIT 1;
+```
+
+${\color{blue}7.}$<br>
+```shell
+terraform init
+```
+```shell
+terraform apply -auto-approve
+```
+```shell
+terraform destroy
+```
+- **terraform init** This command is used to download the provider plugins and set up the backend. This is the first step in any Terraform workflow.
+- **terraform apply -auto-approve** This command is used to generate the proposed changes (plan) and execute immediately without requiring manual confirmation.
+- **terraform destroy** This command is used to delete all resources managed by Terraform.
