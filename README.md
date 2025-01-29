@@ -37,7 +37,7 @@ This repository is organized as follows:
 ├── Module_04_analytics_engineering
 ├── Module_05_batch_processing
 ├── Module_06_streaming
-├── Capstone Project
+├── homework
 └── Readme.md
 ```
 
@@ -63,8 +63,8 @@ Throughout the Zoomcamp, I will explore and utilize various tools and technologi
 ## 🗓️ Progress
 | Module | Topic                                       | Status          |
 |--------|---------------------------------------------|-----------------|
-| 01     | Containerization and Infrastructure as Code | 🔄 In Progress |
-| 02     | Workflow Orchestration                      | ❌ Not Started |
+| 01     | Containerization and Infrastructure as Code | ✅ Completed |
+| 02     | Workflow Orchestration                      | 🔄 In Progress |
 | 03     | Workshop Data Ingestion                     | ❌ Not Started |
 | 04     | Data Warehouse                              | ❌ Not Started |
 | 05     | Analytics Engineering                       | ❌ Not Started |
