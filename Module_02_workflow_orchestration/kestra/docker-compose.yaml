@@ -32,7 +32,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /tmp/kestra-wd:/tmp/kestra-wd
     environment:
-      SECRET_GITHUB_ACCESS_TOKEN: Z2hwX01XNFdKQVJSMHFjRmRPOEZ5OVVhWkp4dnliWU81MzEzMGY2bA==
+      SECRET_GITHUB_ACCESS_TOKEN: Z2hwX1NhYVBUbHlCUDB5b2RNU2hiSFRpenFib3VhNEowNjEyWThldA==
       KESTRA_CONFIGURATION: |
         datasources:
           postgres:
